@@ -6,11 +6,8 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId === "mediaproof-verify") {
-    chrome.tabs.sendMessage(tab.id, {
-      type: "VERIFY_IMAGE",
-      imageUrl: info.srcUrl
-    });
+    console.log("Image URL:", info.srcUrl);
   }
 });
