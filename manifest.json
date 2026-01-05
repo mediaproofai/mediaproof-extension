@@ -1,22 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Mediaproof",
-  "description": "Inline image credibility verification",
   "version": "0.1",
-  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "description": "Inline image credibility verification",
+  "permissions": ["contextMenus", "activeTab"],
   "background": {
     "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["popup.js"]
-    }
-  ],
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "icons": {
-    "128": "icon.png"
   }
 }
